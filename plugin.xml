@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-cobaplugin88" version="0.0.1">
+    <name>CobaPLugin88</name>
+
+    <description>An Android Cordova plugin that allows users to display simple Toast messages at the bottom of the screen.</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,coba,message,alert</keywords>
+    <repo>https://github.com/meriana08/CobaPlugin88/Coba-PhoneGap-Plugin.git</repo>
+    <issue>https://github.com/meriana08/CobaPlugin88/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  
+    <js-module src="www/cobaplugin88.js" name="CobaPlugin88">
+        <clobbers target="window.plugins.CobaPlugin88" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CobaPlugin88">
+                <param name="android-package" value="com.meriana08.cordova.plugin.CobaPlugin88"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/ToastyPlugin.java" target-dir="src/com/meriana08/cordova/plugin" />
+    </platform>
+</plugin>
